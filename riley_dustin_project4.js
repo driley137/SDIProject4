@@ -7,7 +7,7 @@
 */
 
 // Global Variables; Assign variables for the function calls. --------------------------------------------------
-var numToBeFormatted = "3.12890", decimals = "3"   // Decimal Format variables
+var numToBeFormatted = "3.12890", decimalPlaces = "2"   // Decimal Format variables
 
 
 // Functions ----------------------------------------------------------------------------------------------------
@@ -21,9 +21,13 @@ var strPhoneNumberCheck = function(phNumber) {
 
 // Function to format a number to requested decimal places.
 var decimalPlaceFormat = function (number, decimalPlaces){
-    // Parse the string number to a float, then use the toFixed() for the decimal.
+    // Parse the string number to a float, Parse Int the decimal to ensure no errors. Then use the toFixed() for the decimal.
     // Reason variable is string is we can handle formatting all at once in this function.
-    number = parseFloat(number.toFixed(decimalPlaces));
+    number = parseFloat(number);
+    decimalPlaces = parseInt(decimalPlaces);
+    number = number.toFixed(decimalPlaces);
+    // QA Console.Log
+     console.log("Inside the function I am " + number);
     return number;   
 }; // END   d e c i m a l P l a c e F o r m a t ()
 
@@ -31,4 +35,4 @@ var decimalPlaceFormat = function (number, decimalPlaces){
 
 
 // Main code; Where the functions will be called from. ----------------------------------------------------------
-console.log(decimalPlaceFormat(numToBeFormatted, decimals));  // Decimal Format
+console.log("Your number formatted into the decimals you requested is " + decimalPlaceFormat(numToBeFormatted, decimalPlaces));  // Decimal Format
