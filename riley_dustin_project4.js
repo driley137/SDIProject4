@@ -33,4 +33,13 @@ var decimalPlaceFormat = function (number, decimalPlaces){
 
 
 // Main code; Where the functions will be called from. ----------------------------------------------------------
+
+// Remove the block comments if you want to specify your own decimal number and decimal places.
+/*  REMOVE ME TO INTERACT WITH DECIMAL FORMATTING FUNCTION  !!!! START
+
+numToBeFormatted = prompt("What number would you like formatted?");
+decimalPlaces = prompt("How many decimal places do you want it formatted to?");
+
+*/  // REMOVE ME TO INTERACT WITH DECIMAL FORMATTING FUNCTION !!!! END
+
 console.log("Your number formatted into the decimals you requested is " + decimalPlaceFormat(numToBeFormatted, decimalPlaces));  // Decimal Format
