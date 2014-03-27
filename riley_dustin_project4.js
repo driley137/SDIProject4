@@ -26,8 +26,6 @@ var decimalPlaceFormat = function (number, decimalPlaces){
     number = parseFloat(number);
     decimalPlaces = parseInt(decimalPlaces);
     number = number.toFixed(decimalPlaces);
-    // QA Console.Log
-     console.log("Inside the function I am " + number);
     return number;   
 }; // END   d e c i m a l P l a c e F o r m a t ()
 
