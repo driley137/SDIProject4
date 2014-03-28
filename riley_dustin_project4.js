@@ -108,9 +108,11 @@ var isURL = function(urlToTest){
 
 // Function to modify a string's seperator to another specified seperator
 var strFormat = function(str, sym1, sym2){
-    // use replace() to change sym1 with sym2
+    // use replace() to change sym1 with sym2 
+    for(var i = 0; i < str.length; i++){
+        str = str.replace(sym1, sym2);
+    }// end for loop
     
-    str = str.replace("sym1", "sym2");
     return str;
     
 }; // END   s t r F o r m a t ()
@@ -152,12 +154,19 @@ stoppingNumber = prompt("What number do you want to evaluate with?");
 console.log("The next smallest number within the array is " + arrNextSmallest(arrNumbers, stoppingNumber) + "!");      // Next Smallest Array
 
 
-/*  REMOVE ME TO INTERACT WITH NEXT SMALLEST ARRAY FUNCTION  !!!! START
+/*  REMOVE ME TO INTERACT WITH IS URL FUNCTION  !!!! START
 
 url = prompt("Please input your proper URL.");
 
-*/  // REMOVE ME TO INTERACT WITH NEXT SMALLEST ARRAY FUNCTION !!!! END
+*/  // REMOVE ME TO INTERACT WITH IS URL FUNCTION !!!! END
 console.log(isURL(url));
 
+/*  REMOVE ME TO INTERACT WITH STRING REPLACEMENT FUNCTION  !!!! START
 
-console.log("Original string is: " + strForFormat + ". Reformatted version is " + strFormat(strForFormat, symbole, replacement));
+url = prompt("Please input your proper URL.");
+
+*/  // REMOVE ME TO INTERACT WITH STRING REPLACEMENT FUNCTION !!!! END
+strForFormat = prompt("Please input your string containing your seperator.");
+symbol = prompt("Please input your character you want to replace.");
+replacement = prompt("Please input your replacement character.");
+console.log("Original string is: " + strForFormat + ". Reformatted version is " + strFormat(strForFormat, symbol, replacement));
