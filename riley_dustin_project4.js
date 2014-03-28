@@ -12,14 +12,23 @@ var number1 = 5, number2 = 10, fuzzyPercent = "50"      // Fuzzy Match variables
 var arrNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20], stoppingNumber = 13 // Next Smallest Array variables
 var url = "https://www.google.com";                                     // URL Test
 var strForFormat = "a,b,c,d,e,f,g", symbol = ",", replacement = "!"    // String Format/Replacing
+var strNumber = "137";                                               // String to Number
 
 
 // Functions ----------------------------------------------------------------------------------------------------
 
-// Function to evaluate a string to find out if it follows a phone number format. Boolean return.
-var strPhoneNumberCheck = function(phNumber) {
-    
-    
+// Function to parse a number from a string
+var strToNum = function(strNum) {
+    // Parse a number from a string to a numerical value.
+    // new variable to help tell the differnce of string and numerical
+    var num = 0;
+    if (strNum.indexOf('.') === -1) {
+        //no period found so will do Int
+        num = parseInt(strNum);
+        return num;
+    } // else it's going to return the float number.
+    num = parseFloat(strNum);
+    return num;
 }; // END   s t r P h o n e N u m b e r C h e c k ()
 
 
@@ -163,10 +172,17 @@ console.log(isURL(url));
 
 /*  REMOVE ME TO INTERACT WITH STRING REPLACEMENT FUNCTION  !!!! START
 
-url = prompt("Please input your proper URL.");
-
-*/  // REMOVE ME TO INTERACT WITH STRING REPLACEMENT FUNCTION !!!! END
 strForFormat = prompt("Please input your string containing your seperator.");
 symbol = prompt("Please input your character you want to replace.");
 replacement = prompt("Please input your replacement character.");
+
+*/  // REMOVE ME TO INTERACT WITH STRING REPLACEMENT FUNCTION !!!! END
 console.log("Original string is: " + strForFormat + ". Reformatted version is " + strFormat(strForFormat, symbol, replacement));
+
+
+/*  REMOVE ME TO INTERACT WITH STRING TO NUMBER FUNCTION  !!!! START
+
+strNumber = prompt("Please input your number, you can even use decimals!");
+
+*/  // REMOVE ME TO INTERACT WITH STRING TO NUMBER FUNCTION !!!! END
+console.log("Your original number as a string is " + strNumber + ". Your value is now " + strToNum(strNumber) + " as numerical data.");
