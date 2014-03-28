@@ -177,7 +177,7 @@ symbol = prompt("Please input your character you want to replace.");
 replacement = prompt("Please input your replacement character.");
 
 */  // REMOVE ME TO INTERACT WITH STRING REPLACEMENT FUNCTION !!!! END
-console.log("Original string is: " + strForFormat + ". Reformatted version is " + strFormat(strForFormat, symbol, replacement));
+console.log("Original string is: " + strForFormat + ". Reformatted version is " + strFormat(strForFormat, symbol, replacement));   // String Format
 
 
 /*  REMOVE ME TO INTERACT WITH STRING TO NUMBER FUNCTION  !!!! START
@@ -185,4 +185,4 @@ console.log("Original string is: " + strForFormat + ". Reformatted version is " 
 strNumber = prompt("Please input your number, you can even use decimals!");
 
 */  // REMOVE ME TO INTERACT WITH STRING TO NUMBER FUNCTION !!!! END
-console.log("Your original number as a string is " + strNumber + ". Your value is now " + strToNum(strNumber) + " as numerical data.");
+console.log("Your original number as a string is " + strNumber + ". Your value is now " + strToNum(strNumber) + " as numerical data.");  // String to Number
