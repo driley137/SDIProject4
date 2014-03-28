@@ -10,7 +10,7 @@
 var numToBeFormatted = "3.12890", decimalPlaces = "2"   // Decimal Format variables
 var number1 = 5, number2 = 10, fuzzyPercent = "50"      // Fuzzy Match variables
 var arrNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20], stoppingNumber = 13 // Next Smallest Array variables
-var url = "http://www.google.com";
+var url = "https://www.google.com";
 
 
 // Functions ----------------------------------------------------------------------------------------------------
@@ -138,4 +138,10 @@ stoppingNumber = prompt("What number do you want to evaluate with?");
 */  // REMOVE ME TO INTERACT WITH NEXT SMALLEST ARRAY FUNCTION !!!! END
 console.log("The next smallest number within the array is " + arrNextSmallest(arrNumbers, stoppingNumber) + "!");      // Next Smallest Array
 
+
+/*  REMOVE ME TO INTERACT WITH NEXT SMALLEST ARRAY FUNCTION  !!!! START
+
+url = prompt("Please input your proper URL.");
+
+*/  // REMOVE ME TO INTERACT WITH NEXT SMALLEST ARRAY FUNCTION !!!! END
 console.log(isURL(url));
