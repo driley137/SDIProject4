@@ -10,6 +10,8 @@
 var numToBeFormatted = "3.12890", decimalPlaces = "2"   // Decimal Format variables
 var number1 = 5, number2 = 10, fuzzyPercent = "50"      // Fuzzy Match variables
 var arrNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20], stoppingNumber = 13 // Next Smallest Array variables
+var url = "http://www.google.com";
+
 
 // Functions ----------------------------------------------------------------------------------------------------
 
@@ -84,6 +86,24 @@ var arrNextSmallest = function(arr, number) {
 } // END   a r r N e x t S m a l l e s t ()
 
 
+// Function to determine if an input string is a URL
+var isURL = function(urlToTest){
+    // Will return a boolean value if it in fact a URL
+    var http = urlToTest.slice(0,7);
+    var https = urlToTest.slice(0,8);
+    
+    if (http === "http://" ) {
+        // http IS http://
+        return true;
+    } else if (https === "https://") {
+        // https IS https://
+        return true;
+    }
+    // neither http or https variables are correct.
+    return false;
+    
+} // END   i s U R L ()
+
 
 // Main code; Where the functions will be called from. ----------------------------------------------------------
 
@@ -118,4 +138,4 @@ stoppingNumber = prompt("What number do you want to evaluate with?");
 */  // REMOVE ME TO INTERACT WITH NEXT SMALLEST ARRAY FUNCTION !!!! END
 console.log("The next smallest number within the array is " + arrNextSmallest(arrNumbers, stoppingNumber) + "!");      // Next Smallest Array
 
-
+console.log(isURL(url));
