@@ -10,7 +10,8 @@
 var numToBeFormatted = "3.12890", decimalPlaces = "2"   // Decimal Format variables
 var number1 = 5, number2 = 10, fuzzyPercent = "50"      // Fuzzy Match variables
 var arrNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20], stoppingNumber = 13 // Next Smallest Array variables
-var url = "https://www.google.com";
+var url = "https://www.google.com";                                     // URL Test
+var strForFormat = "a,b,c,d,e,f,g", symbol = ",", replacement = "!"    // String Format/Replacing
 
 
 // Functions ----------------------------------------------------------------------------------------------------
@@ -61,7 +62,7 @@ var fuzzyMatch = function(num1, num2, percent) {
         
     } // end if/else statement
     
-} // END    f u z z y M a t c h ()
+}; // END    f u z z y M a t c h ()
 
 // Function to return the next numerical to the comparable input number, from an array.
 var arrNextSmallest = function(arr, number) {
@@ -83,7 +84,7 @@ var arrNextSmallest = function(arr, number) {
 
     return winningNumber;
     
-} // END   a r r N e x t S m a l l e s t ()
+}; // END   a r r N e x t S m a l l e s t ()
 
 
 // Function to determine if an input string is a URL
@@ -102,7 +103,19 @@ var isURL = function(urlToTest){
     // neither http or https variables are correct.
     return false;
     
-} // END   i s U R L ()
+}; // END   i s U R L ()
+
+
+// Function to modify a string's seperator to another specified seperator
+var strFormat = function(str, sym1, sym2){
+    // use replace() to change sym1 with sym2
+    
+    str = str.replace("sym1", "sym2");
+    return str;
+    
+}; // END   s t r F o r m a t ()
+
+
 
 
 // Main code; Where the functions will be called from. ----------------------------------------------------------
@@ -145,3 +158,6 @@ url = prompt("Please input your proper URL.");
 
 */  // REMOVE ME TO INTERACT WITH NEXT SMALLEST ARRAY FUNCTION !!!! END
 console.log(isURL(url));
+
+
+console.log("Original string is: " + strForFormat + ". Reformatted version is " + strFormat(strForFormat, symbole, replacement));
