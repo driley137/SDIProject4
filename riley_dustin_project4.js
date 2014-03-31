@@ -9,7 +9,7 @@
 // Global Variables; Assign variables for the function calls. --------------------------------------------------
 var numToBeFormatted = "3.12890", decimalPlaces = "2"   // Decimal Format variables
 var number1 = 5, number2 = 10, fuzzyPercent = "50"      // Fuzzy Match variables
-var arrNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20], stoppingNumber = 13 // Next Smallest Array variables
+var arrNumbers = [0,1,2,7,8,14,11,9,22,25,52,35], stoppingNumber = 9 // Next Smallest Array variables
 var url = "https://www.google.com";                                     // URL Test
 var strForFormat = "a,b,c,d,e,f,g", symbol = ",", replacement = "!"    // String Format/Replacing
 var strNumber = "137";                                               // String to Number
